@@ -1,0 +1,159 @@
+main {
+    height: 570px;
+    width:100%;
+    padding-top:60px;
+    background-color: #ffbb00;
+    color:white;
+}
+
+.main-div {
+    padding:50px 60px 0 60px;
+    box-sizing:border-box;
+    width:80%;
+    height:100%;
+    text-align: center;
+    margin:auto;
+}
+
+svg {
+    z-index:-1;
+}
+
+.hero-logo {
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    border:white 4px solid;
+}
+
+main h1 {
+    font-size:6rem;
+    font-family:century Gothic;
+    color:#ffffff;
+    text-shadow:2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Universal Section */
+#about,#gallery,#contact {
+    width:100%;
+    height:500px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+/* About */
+#about .container {
+    box-sizing:border-box;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding:0 80px;
+    box-sizing: border-box;
+}
+
+#about .container .column{
+    font-size:0.9rem;
+    text-align: center;
+    width:40%;
+    padding:0 60px;
+    box-sizing:border-box;
+}
+
+/* Gallery */
+#gallery {
+    background-color:#ffbb00;
+    margin-top:-10px;
+    color:white;
+    height: 800px;
+}
+
+#gallery .container {
+    width:100%;
+    text-align:center;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#gallery .container .column {
+    width:25%;
+    border-radius:2%;
+    overflow:hidden;
+    background-color:rgba(0, 0, 0, 0.1);
+}
+
+#gallery .container .column img {
+    width:100%;
+}
+
+#gallery .container .column .text {
+    padding:0 15px;
+}
+
+#gallery .container .column .text button {
+    padding:8px 40px;
+    color:white;
+    background-color:transparent;
+    margin:5px 0 10px 0;
+    border:2.5px solid white;
+    border-radius:5px;
+    text-align:left;
+    transition:0.2s;
+}
+
+#gallery .container .column .text button:hover {
+    background-color:white;
+    color:#ffbb00;
+}
+
+/* Contact */
+
+#community {
+    height:100%;
+    background-color:rgb(49, 49, 49);
+    color:white;
+    padding:20px 50px;
+    text-align: center;
+}
+
+#community .container {
+    padding:20px 0;
+    width:100%;
+    display: flex;
+    justify-content:space-evenly ;
+    text-align: center;
+}
+
+#community .container .column ul li a {
+   color:rgba(255, 255, 255, 0.6);
+}
+
+#community .container .column ul li a:hover {
+    transition:0.2s;
+ }
+
+#community .container .column ul li a:hover {
+    color:white;
+ }
+
+#community .column2 {
+    font-size:1.8em;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:200px;
+    text-align: center;
+    margin:auto;
+}
+
+#community .column2 > *{
+    color:white;
+    transition:0.2s;
+}
+
+#community .column2 > *:hover{
+    transform:scale(110%);
+}
