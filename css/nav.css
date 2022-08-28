@@ -1,0 +1,199 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    list-style:none;
+    text-decoration:none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+button {
+    cursor:pointer;
+}
+
+body {
+    font-family:poppins;
+}
+
+/* NAV */
+
+nav {
+    position:fixed;
+    color:white;
+    width:100%;
+    background-color:#ff8c00;
+    height:60px;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding:0 40px;
+    box-sizing:border-box;
+    text-align: center;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.titleNav a {
+    color:white;
+    text-decoration:none;
+}
+
+nav ul {    
+    list-style: none;
+    display:flex;    
+    justify-content: space-between;
+    width:300px;
+}
+
+.nav-item {
+    color:white;
+    text-decoration:none;
+    font-weight: 600;
+}
+
+.list-item * {
+    transition:0.3s;
+}
+
+.hamburgerMenu {
+    background-color:transparent;
+    border-radius:5px;
+    width:40px; height:40px;
+    border:2px rgba(255, 255, 255, 0.5) solid;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor:pointer;
+    display:none;
+}
+
+.hamburgerMenu > * {
+    width:80%;
+    height:5px;
+    background-color :white ;
+    border-radius:5px;
+}
+
+/* Hover */
+.list-item *:hover {
+    transform: scale(110%);
+}
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width:768px){
+    nav {
+        justify-content: space-between;        
+    }
+    .hamburgerMenu {
+        display:flex;
+    }
+    .list-item {
+        position:absolute;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-evenly;
+        width:100%;
+        z-index:-1;
+        height:80vh;
+        transform:translateY(-100%);
+        transition:0.5s;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        opacity:0;
+        background-color:#ff8c00;
+    }
+
+    .listToggle {
+        opacity:1;
+        transform:translateY(0);
+    }
+
+    /* Main */
+    main {
+        height:100% !important;
+    }
+    .main-div {
+        width:100% !important;
+        height:100% !important;
+        padding:0;
+    }
+
+    /* About */
+    #about {
+        margin-top:-80px;
+    }
+
+    #about .container {        
+        padding:0 !important;
+        height:100% !important;
+        width:100% !important;
+        align-items: center !important;
+        justify-content: space-evenly !important;
+        flex-direction:column !important;
+    }
+
+    #about .container .column{        
+        width:100% !important;
+    }
+
+    /* Gallery */
+    #gallery {
+        height:100% !important;
+    }
+    #gallery .container {
+        padding:0 !important;
+        height:100% !important;
+        width:100% !important;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction:column;
+    }
+
+    #gallery .container .column{
+        display:flex ;
+        flex-direction:row ;
+        justify-content: space-between ;
+        width:100% !important;
+        padding:20px 10px;
+        box-sizing:border-box !important;
+
+        margin-bottom:20px;
+    }
+
+    #gallery .container .column img {
+        width:50% !important;
+        height:50% !important;
+    }
+
+    #gallery .container .column .text {
+        padding-right:0 !important;
+        font-size:0.8em;
+        text-align: left;
+        height:100% !important;
+    }
+
+    /* Community */
+
+    #community .container{
+        flex-direction:column;
+        justify-content: space-between;
+        padding:0 !important;
+    }
+    
+    #community .container .column{
+        margin:10px 0;
+    }
+
+    /* Fix Smooth Scroll Behind Content Problem */
+    #about, #gallery {
+        padding-top:80px;
+    }
+}
